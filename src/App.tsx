@@ -1,6 +1,7 @@
 import ListGroup from "./components/ListGroup";
 import "./App.css";
 import Button from "./components/Button/Button";
+import Like from "./components/Like";
 
 function App() {
   const items = ["Tokyo", "Mumbai", "Dubai", "London", "New York"];
@@ -16,6 +17,8 @@ function App() {
       <Button color="success" onClick={() => console.log()}>
         Click Me!
       </Button>
+
+      <Like onClick={() => console.log("Clicked.")}></Like>
     </>
   );
 }
