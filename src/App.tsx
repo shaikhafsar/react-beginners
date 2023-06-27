@@ -1,12 +1,11 @@
-import Alert from "./components/Alert";
-import ListGroup from "./components/ListGroup";
+import Button from "./components/Button";
 
 function App() {
   return (
     <div>
-      <Alert>
-        Afsar <span>Shaikh</span>
-      </Alert>
+      <Button color="success" onClick={() => console.log("Button clicked.")}>
+        Click Me!
+      </Button>
     </div>
   );
 }
