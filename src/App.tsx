@@ -2,9 +2,14 @@ import ListGroup from "./components/ListGroup";
 import "./App.css";
 import Button from "./components/Button/Button";
 import Like from "./components/Like";
+import { useState } from "react";
+import NavBar from "./components/NavBar";
+import Cart from "./components/Cart";
 
 function App() {
   const items = ["Tokyo", "Mumbai", "Dubai", "London", "New York"];
+
+  const [cartItems, setCartItems] = useState(["Product1", "Product2"]);
 
   return (
     <>
@@ -19,6 +24,10 @@ function App() {
       </Button>
 
       <Like onClick={() => console.log("Clicked.")}></Like>
+
+      <NavBar cartItemsCount={cartItems.length}></NavBar>
+
+      <Cart cartItems={cartItems} onClear={() => setCartItems([])}></Cart>
     </>
   );
 }
